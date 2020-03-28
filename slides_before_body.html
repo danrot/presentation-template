@@ -1,0 +1,23 @@
+<script>
+const availableSlides = [...document.querySelectorAll('section[id]')].map((element) => '#' + element.id);
+availableSlides.unshift('#');
+
+function goToSlide(number) {
+    if (availableSlides[number]) {
+        location = availableSlides[number];
+    }
+}
+
+document.addEventListener('keydown', function(event) {
+    const currentSlide = availableSlides.findIndex((availableSlide) => availableSlide === (location.hash || '#'));
+
+    switch (event.key) {
+        case 'ArrowLeft':
+            goToSlide(currentSlide - 1);
+            break;
+        case 'ArrowRight':
+            goToSlide(currentSlide + 1);
+            break;
+    }
+});
+</script>
