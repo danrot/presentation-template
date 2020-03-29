@@ -43,7 +43,7 @@ blockquote {
     margin: 1rem 0;
 }
 
-.sourceCode {
+div.sourceCode {
     background-color: #eee;
     padding: 0.2rem;
     font-size: 0.5rem;
