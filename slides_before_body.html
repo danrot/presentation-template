@@ -1,5 +1,5 @@
 <script>
-const availableSlides = [...document.querySelectorAll('section[id]')].map((element) => '#' + element.id);
+const availableSlides = [...document.querySelectorAll('section[id]')].map((element) => '#' + encodeURI(element.id));
 availableSlides.unshift('#');
 
 function goToSlide(number) {
