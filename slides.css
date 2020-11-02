@@ -55,3 +55,16 @@ div.sourceCode {
 code {
     background-color: #eee;
 }
+
+table {
+    border-spacing: 0;
+}
+
+tbody tr:nth-child(odd) {
+    background: #f2f2f2;
+}
+
+td, th {
+    border-top: 1px solid #dee2e6;
+    padding: 2vh;
+}
