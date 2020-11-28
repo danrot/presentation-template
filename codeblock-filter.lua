@@ -33,7 +33,12 @@ function CodeBlock(block)
         error 'Image conversion failed. Aborting.'
     end
 
-    return pandoc.RawBlock('html', img)
+    local fname = pandoc.sha1(img) .. "." .. filetype
+    pandoc.mediabag.insert(fname, mimetype, img)
+
+    local imgObj = pandoc.Image({}, fname)
+
+    return pandoc.Para{imgObj}
 end
 
 return {
