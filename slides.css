@@ -8,6 +8,7 @@ html {
     font-family: sans-serif;
     font-size: 40px;
     overflow: hidden;
+    scroll-behavior: smooth;
 }
 
 #title-block-header, .level2, .level1 h1 {
