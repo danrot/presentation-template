@@ -7,6 +7,7 @@
 html {
     font-family: sans-serif;
     font-size: 40px;
+    line-height: 1.2;
     overflow: hidden;
     scroll-behavior: smooth;
 }
