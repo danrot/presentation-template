@@ -1,8 +1,7 @@
 # Presentation Template
 
 This is my presentation template using pandoc to translate a markdown file called `slides.md` to HTML. The presentation
-is styled using CSS contained in the `slides.css` file. The `make` command is used to easily create a self-contained
-HTML presentation, which means a single HTML file is enough to start the presentation from any machine.
+is created using the [`markdown-presentation` package](https://github.com/danrot/markdown-presentation).
 
 ## Prerequisites
 
@@ -46,26 +45,12 @@ Afterwards the other slides are defined. Every first and second level header wil
 ### Content on Slide 2
 ```
 
-Additionally `graphviz` code can be directly embeded as SVGs in the presentation by using a fenced code block with the
-`graphviz` annotation:
+### Diagrams
 
-~~~markdown
-```graphviz
-digraph G {
-    A -> B
-}
+Diagrams are automatically created using `dot` from the files ending with `.dot` in the `diagrams` folder. They are
+placed as SVGs in the same `diagram` folder, but will have a `.svg` ending. By this name it can be included in the
+presentation. So `diagrams/test.dot` will become `diagrams/test.dot.svg` and can be included in the `slides.md` file:
+
+```markdown
+![test](diagram/test.dot.svg)
 ```
-~~~
-
-### slides.css
-
-This file contains the CSS that will be inlined in the built presentation. It relies on the HTML structure pandoc is
-generating.
-
-### slides_before_body.html
-
-Contains a few lines of JavaScript to change slides when the left or right arrow key is pressed.
-
-### codeblock-filter.lua
-
-This lua script will generate the SVG graphics from `graphviz` code blocks in `slides.md`.
