@@ -1,0 +1,3 @@
+[submodule "markdown-presentation"]
+	path = markdown-presentation
+	url = git@github.com:danrot/markdown-presentation.git
