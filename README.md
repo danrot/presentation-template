@@ -15,7 +15,7 @@ be generated
 Building the presentation into a single self-contained HTML file is done by executing the following command:
 
 ```bash
-make html
+make
 ```
 
 ## Customizing the presentation
